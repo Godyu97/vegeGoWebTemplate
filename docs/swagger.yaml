@@ -1,0 +1,86 @@
+definitions:
+  handler.ApiResp:
+    properties:
+      code:
+        type: string
+      msg:
+        type: string
+    type: object
+info:
+  contact:
+    email: godyu97@foxmail.com
+    name: vege9
+  description: 大数据golang后端平台服务
+  license:
+    name: Apache 2.0
+    url: https://github.com/Godyu97
+  title: xxx
+  version: "1.0"
+paths:
+  /Ping:
+    get:
+      consumes:
+      - application/json
+      description: Ping
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.ApiResp'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "401":
+          description: 权限不足
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.ApiResp'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: 服务器内部错误
+          schema:
+            $ref: '#/definitions/handler.ApiResp'
+      summary: Ping
+      tags:
+      - demo
+  /v1/api/obj/ObjPing:
+    get:
+      consumes:
+      - application/json
+      description: ObjPing
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.ApiResp'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "401":
+          description: 权限不足
+          schema:
+            allOf:
+            - $ref: '#/definitions/handler.ApiResp'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "500":
+          description: 服务器内部错误
+          schema:
+            $ref: '#/definitions/handler.ApiResp'
+      summary: ObjPing
+      tags:
+      - demo
+swagger: "2.0"
