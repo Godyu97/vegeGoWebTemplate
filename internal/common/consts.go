@@ -1,5 +1,5 @@
 package common
 
 const (
-	DefaultConfFileName = "xxx.yaml"
+	DefaultConfFileName = "xxx_conf.yaml"
 )

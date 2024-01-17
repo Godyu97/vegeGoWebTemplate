@@ -47,7 +47,7 @@ const docTemplate = `{
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "type": "string"
+                                            "$ref": "#/definitions/types.PingResp"
                                         }
                                     }
                                 }
@@ -106,7 +106,7 @@ const docTemplate = `{
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "type": "string"
+                                            "$ref": "#/definitions/types.PingResp"
                                         }
                                     }
                                 }
@@ -152,6 +152,14 @@ const docTemplate = `{
                     "type": "string"
                 }
             }
+        },
+        "types.PingResp": {
+            "type": "object",
+            "properties": {
+                "field": {
+                    "type": "string"
+                }
+            }
         }
     }
 }`
@@ -163,7 +171,7 @@ var SwaggerInfo = &swag.Spec{
 	BasePath:         "",
 	Schemes:          []string{},
 	Title:            "xxx",
-	Description:      "大数据golang后端平台服务",
+	Description:      "golang后端平台服务项目demo",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",

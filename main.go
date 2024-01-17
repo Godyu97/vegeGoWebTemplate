@@ -11,15 +11,15 @@ import (
 	"path"
 )
 
-// @title			xxx
-// @version		1.0
-// @description	大数据golang后端平台服务
-// @contact.name	vege9
-// @contact.email	godyu97@foxmail.com
-// @license.name	Apache 2.0
-// @license.url	https://github.com/Godyu97
-// @host
-// @BasePath
+//	@title			xxx
+//	@version		1.0
+//	@description	golang后端平台服务项目demo
+//	@contact.name	vege9
+//	@contact.email	godyu97@foxmail.com
+//	@license.name	Apache 2.0
+//	@license.url	https://github.com/Godyu97
+//	@host
+//	@BasePath
 func main() {
 	//todo init cfg
 	conf := os.Getenv("xxx_ConfFile")
@@ -32,7 +32,7 @@ func main() {
 	vegelog.InitLogger(path.Join("./log", "xxx_log.log"), vegelog.JudgeLogLevel(cfg.Debug))
 	vegelog.LogInfo("xxx Init 🚀~")
 	//init db
-	dao.InitDb(cfg.MySql, cfg.Redis)
+	//dao.InitDb(cfg.MySql, cfg.Redis)
 	engine := gin.New()
 	server.RegHttpRouter(engine)
 	go func() {

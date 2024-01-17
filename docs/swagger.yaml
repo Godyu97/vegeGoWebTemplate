@@ -6,11 +6,16 @@ definitions:
       msg:
         type: string
     type: object
+  types.PingResp:
+    properties:
+      field:
+        type: string
+    type: object
 info:
   contact:
     email: godyu97@foxmail.com
     name: vege9
-  description: 大数据golang后端平台服务
+  description: golang后端平台服务项目demo
   license:
     name: Apache 2.0
     url: https://github.com/Godyu97
@@ -32,7 +37,7 @@ paths:
             - $ref: '#/definitions/handler.ApiResp'
             - properties:
                 data:
-                  type: string
+                  $ref: '#/definitions/types.PingResp'
               type: object
         "401":
           description: 权限不足
@@ -65,7 +70,7 @@ paths:
             - $ref: '#/definitions/handler.ApiResp'
             - properties:
                 data:
-                  type: string
+                  $ref: '#/definitions/types.PingResp'
               type: object
         "401":
           description: 权限不足

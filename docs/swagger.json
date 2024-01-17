@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "大数据golang后端平台服务",
+        "description": "golang后端平台服务项目demo",
         "title": "xxx",
         "contact": {
             "name": "vege9",
@@ -39,7 +39,7 @@
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "type": "string"
+                                            "$ref": "#/definitions/types.PingResp"
                                         }
                                     }
                                 }
@@ -98,7 +98,7 @@
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "type": "string"
+                                            "$ref": "#/definitions/types.PingResp"
                                         }
                                     }
                                 }
@@ -141,6 +141,14 @@
                     "type": "string"
                 },
                 "msg": {
+                    "type": "string"
+                }
+            }
+        },
+        "types.PingResp": {
+            "type": "object",
+            "properties": {
+                "field": {
                     "type": "string"
                 }
             }
